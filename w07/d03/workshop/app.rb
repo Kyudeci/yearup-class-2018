@@ -2,7 +2,7 @@ require 'faker'
 require './student'
 require './classroom'
 require './grade'
-
+require './reportcard'
 # Our four classrooms for the first years
 @A = Classroom.new("1A")
 @B = Classroom.new("1B")
@@ -15,7 +15,7 @@ def genStudent
   s.reportcard.addGrade(Grade.new("history", rand(0..100)))
   s.reportcard.addGrade(Grade.new("english", rand(0..100)))
   s.reportcard.addGrade(Grade.new("science", rand(0..100)))
-  s
+  return s
 end
 
 # Generate our students
@@ -33,14 +33,14 @@ end
 end
 
 # Check the rosters
-# @A.roster
-# puts ""
-# @B.roster
-# puts ""
-# @C.roster
-# puts ""
-# @D.roster
-# puts ""
+@A.roster
+puts ""
+@B.roster
+puts ""
+@C.roster
+puts ""
+@D.roster
+puts ""
 
 
 ############################################################
@@ -52,8 +52,9 @@ end
 #     value.reportard.grades.each do |key, value|
 #       total = total + value.grade
 #     end
-#     if total > 200:
+#     if total > 200;
 #       puts "PASS"
+#     end
 #   }
 # end
 

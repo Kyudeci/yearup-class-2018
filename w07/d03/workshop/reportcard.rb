@@ -1,5 +1,4 @@
 class Reportcard
-
   def initialize
     @grades = {}
   end
